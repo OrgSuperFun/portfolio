@@ -1,16 +1,21 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,300;0,6..12,400;0,6..12,500;0,6..12,700;1,6..12,300;1,6..12,400;1,6..12,500;1,6..12,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&family=Nunito+Sans:ital,opsz,wght@0,6..12,300;0,6..12,400;0,6..12,500;0,6..12,700;1,6..12,300;1,6..12,400;1,6..12,500;1,6..12,700&display=swap');
 
 @import '/css/reset.css';
 
 :root {
-	--text: rgb(241, 245, 254);
-	--background: rgb(0, 14, 47);
-	--primary: rgb(13, 50, 135);
-	--secondary: rgb(5, 19, 51);
-	--accent: rgb(28, 89, 233);
+	--text: hsl(0, 12%, 92%);
+	--background: hsl(0, 0%, 0%);
+	--primary: hsl(0, 0%, 80%);
+	--secondary: hsl(240, 13%, 15%);
+	--accent: hsl(180, 13%, 55%);
+	--primary-font: 'Nunito Sans', sans-serif;
+	--secondary-font: 'Indie Flower', cursive;
+
+	--timeline-height: 2dvh;
 }
 
 body {
+	position: relative;
 	background-color: var(--background);
 	color: var(--text);
 	font-family: 'Nunito Sans', sans-serif;
@@ -19,4 +24,95 @@ body {
 	line-height: 1.5;
 	margin: 0;
 	padding: 0;
+	height: 100dvh;
+	width: 100dvw;
+	overflow-x: hidden;
+}
+
+nav {
+	width: 30dvw;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 2rem;
+
+	.nav-bar {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding: 0 1rem;
+		.nav-links:hover {
+			color: var(--accent);
+			text-decoration: underline;
+			text-underline-offset: 0.3rem;
+		}
+	}
+}
+
+.timeline {
+	width: 100%;
+	height: 100%;
+
+	.section-timeline-hidden {
+		width: 100dvw;
+		height: 100dvh;
+		background-color: var(--secondary);
+		&:nth-child(odd) {
+			background-color: var(--background);
+		}
+		&:nth-child(even) {
+			color: var(--primary);
+		}
+	}
+	.section-element {
+		width: 90dvh;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		margin-left: auto;
+		margin-right: auto;
+		text-wrap: balance;
+		text-align: center;
+	}
+
+	&::before {
+		content: '';
+		position: fixed;
+		top: 2%;
+		left: 2%;
+		width: 2px;
+		height: var(--timeline-height);
+		min-height: 2dvh;
+		max-height: 96dvh;
+		background-color: var(--primary);
+		border-radius: 2px;
+	}
+}
+
+/* Media Queries */
+@media (prefers-reduced-motion) {
+	* {
+		animation: none !important;
+		transition: none !important;
+	}
+}
+
+/* Animations */
+
+@keyframes slide-in {
+	0% {
+		transform: translateX(-100%);
+	}
+	100% {
+		transform: translateX(0%);
+	}
+}
+
+@keyframes fade {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
 }
