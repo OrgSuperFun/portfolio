@@ -12,6 +12,7 @@
 	--secondary-font: 'Indie Flower', cursive;
 
 	--timeline-height: 2dvh;
+	scroll-behavior: smooth;
 }
 
 body {
@@ -64,7 +65,6 @@ nav {
 		}
 	}
 	.section-element {
-		width: 90dvh;
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
@@ -73,6 +73,7 @@ nav {
 		margin-right: auto;
 		text-wrap: balance;
 		text-align: center;
+		gap: 1rem;
 	}
 
 	&::before {
@@ -87,6 +88,18 @@ nav {
 		background-color: var(--primary);
 		border-radius: 2px;
 	}
+}
+
+h2 {
+	font-family: 'Indie Flower', cursive;
+	font-size: 2rem;
+	font-weight: 400;
+}
+.bounce {
+	margin-top: 10rem;
+	animation: bounce 2s infinite;
+	font-size: 4rem;
+	color: white;
 }
 
 /* Media Queries */
@@ -114,5 +127,16 @@ nav {
 	}
 	100% {
 		opacity: 1;
+	}
+}
+@keyframes bounce {
+	0% {
+		transform: translateY(0);
+	}
+	50% {
+		transform: translateY(-1rem);
+	}
+	100% {
+		transform: translateY(0);
 	}
 }
