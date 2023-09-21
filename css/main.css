@@ -55,7 +55,7 @@ nav {
 
 	.section-timeline-hidden {
 		width: 100dvw;
-		height: 100dvh;
+		height: 130dvh;
 		background-color: var(--secondary);
 		&:nth-child(odd) {
 			background-color: var(--background);
@@ -77,7 +77,7 @@ nav {
 		.timeline-item-details {
 			width: 70dvw;
 			font-family: 'Shadows Into Light', cursive;
-			font-size: 1.5rem;
+			font-size: 2rem;
 			font-weight: 400;
 		}
 	}
