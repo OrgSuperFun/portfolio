@@ -95,6 +95,12 @@ h2 {
 	font-size: 2rem;
 	font-weight: 400;
 }
+.bounce {
+	margin-top: 10rem;
+	animation: bounce 2s infinite;
+	font-size: 4rem;
+	color: white;
+}
 
 /* Media Queries */
 @media (prefers-reduced-motion) {
@@ -121,5 +127,16 @@ h2 {
 	}
 	100% {
 		opacity: 1;
+	}
+}
+@keyframes bounce {
+	0% {
+		transform: translateY(0);
+	}
+	50% {
+		transform: translateY(-1rem);
+	}
+	100% {
+		transform: translateY(0);
 	}
 }
