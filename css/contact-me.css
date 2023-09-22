@@ -36,6 +36,10 @@ input {
 	min-height: 30px;
 	border-radius: 10px;
 }
+label {
+	font-size: 2rem;
+	font-family: var(--secondary-font);
+}
 button {
 	margin-top: 20px;
 	padding: 2rem 6rem;
@@ -44,4 +48,8 @@ button {
 	color: var(--text);
 	border: none;
 	cursor: pointer;
+}
+h1 {
+	font-size: 4rem;
+	font-family: var(--secondary-font);
 }
