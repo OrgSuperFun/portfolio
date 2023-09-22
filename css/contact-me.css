@@ -1,0 +1,47 @@
+:root {
+	--text: hsl(0, 12%, 92%);
+	--background: hsl(0, 0%, 0%);
+	--primary: hsl(0, 0%, 80%);
+	--secondary: hsl(240, 13%, 15%);
+	--accent: hsl(180, 13%, 55%);
+	--primary-font: 'Nunito Sans', sans-serif;
+	--secondary-font: 'Indie Flower', cursive;
+
+	--timeline-height: 2dvh;
+	scroll-behavior: smooth;
+}
+
+.contact-me-section {
+	height: 100dvh;
+	width: 100dvw;
+	margin-top: 2rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.contact-me-form {
+	width: 80%;
+	height: 50%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+textarea,
+input {
+	resize: none;
+	width: 600px;
+	min-height: 30px;
+	border-radius: 10px;
+}
+button {
+	margin-top: 20px;
+	padding: 2rem 6rem;
+	border-radius: 10px;
+	background-color: var(--secondary);
+	color: var(--text);
+	border: none;
+	cursor: pointer;
+}

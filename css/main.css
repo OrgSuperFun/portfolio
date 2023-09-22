@@ -118,6 +118,11 @@ embed {
 	height: 70%;
 	background-color: white;
 }
+.contact-me {
+	padding: 1rem;
+	background-color: var(--secondary);
+	border-radius: 1rem;
+}
 
 /* Media Queries */
 @media (prefers-reduced-motion) {
