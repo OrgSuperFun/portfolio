@@ -12,7 +12,18 @@
 	--secondary-font: 'Indie Flower', cursive;
 
 	--timeline-height: 2dvh;
+
+	view-transition-name: root;
+
 	scroll-behavior: smooth;
+}
+
+::view-transition-old(root) {
+	animation: 0.3s transition-out 0s ease;
+}
+
+::view-transition-new(root) {
+	animation: 0.3s transition-in 0s ease;
 }
 
 body {
@@ -160,5 +171,22 @@ embed {
 	}
 	100% {
 		transform: translateY(0);
+	}
+}
+
+@keyframes transition-out {
+	0% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0;
+	}
+}
+@keyframes transition-in {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
 	}
 }
