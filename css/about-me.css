@@ -1,0 +1,29 @@
+.about-me-section {
+	height: 100dvh;
+	width: 100dvw;
+	margin-top: 20%;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	gap: 2rem;
+}
+.about-me-image {
+	width: 200px;
+	height: 200px;
+	border-radius: 10%;
+	object-fit: cover;
+	object-position: center;
+}
+.about-me-description {
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+}
+
+.about-me-description p {
+	max-width: 500px;
+}
+.socials {
+	height: 80px;
+	width: 80px;
+}
