@@ -53,3 +53,21 @@ h1 {
 	font-size: 4rem;
 	font-family: var(--secondary-font);
 }
+
+.sucess {
+	width: 100dvw;
+	height: 100dvh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	text-align: center;
+	gap: 2rem;
+	& a {
+		text-decoration: underline;
+		text-underline-offset: 5px;
+		&:hover {
+			color: var(--accent);
+		}
+	}
+}
