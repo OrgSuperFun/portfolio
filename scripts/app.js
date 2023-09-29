@@ -36,10 +36,19 @@ window.addEventListener('scroll', () => {
 	)
 })
 
-const sendEmail = (e) => {
+let contactForm = document.getElementById('contact-form')
+
+contactForm.addEventListener('submit', (e) => {
+	e.preventDefault()
 	const name = document.getElementById('name').value
 	const email = document.getElementById('email').value
 	const message = document.getElementById('message').value
-	console.log(name, email, message)
-	window.location.href = `/pages/sucess.html`
-}
+	const submitButton = document.getElementById('submit-button')
+
+	if (name && email && message) {
+		submitButton.innerText = 'Sending...'
+		setTimeout(() => {
+			window.location.href = `/pages/sucess.html`
+		}, 2000)
+	}
+})
